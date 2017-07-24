@@ -1,7 +1,7 @@
 {{!< default}}
 {{!-- 上面的这个标记的作用是，插入所有内容到Default.hbs模版的 {body} 区域里 --}}
 
-{{!-- The big featured header, it uses blog cover image as a BG if available --}}
+{{!-- 如果Cover Image就显示，没有就不显示 --}}
 <header class="site-header outer {{#if @blog.cover_image}}" style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}">
     <div class="inner">
         <div class="site-header-content">
@@ -23,6 +23,7 @@
     <div class="inner">
 
         <div class="post-feed">
+            {{!-- 循环输出所有POST --}}
             {{#foreach posts}}
 
                 {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
