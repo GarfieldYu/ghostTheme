@@ -2,16 +2,16 @@
 <html>
 <head>
 
-    {{!-- Document Settings --}}
+    {{!-- 文档设定 --}}
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    {{!-- Base Meta --}}
+    {{!-- 基本头文件 --}}
     <title>{{meta_title}}</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    {{!-- Styles'n'Scripts --}}
+    {{!-- 样式表单 --}}
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
 
     {{!-- This tag outputes SEO meta+structured data and other important settings --}}
@@ -22,10 +22,10 @@
 
     <div class="site-wrapper">
 
-        {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+        {{!-- 所有主要内容都插入到body块中, 包括index.hbs, post.hbs等等 --}}
         {{{body}}}
 
-        {{!-- The footer at the very bottom of the screen --}}
+        {{!-- The footer 部分处于页面最下方 --}}
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
                 <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
